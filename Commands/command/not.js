@@ -1,4 +1,4 @@
-const {SlashCommandBuilder,EmbedBuilder,CommandInteractionOptionResolver} = require('discord.js');
+const {SlashCommandBuilder,EmbedBuilder} = require('discord.js');
 const wait = require('timers/promises').setTimeout;
 
 
@@ -29,6 +29,7 @@ module.exports = {
             interaction.deleteReply();
             interaction.channel.send({embeds:[notallow]});
         }catch(error){
+            console.log('te');
             console.error(error);
         } 
     }
